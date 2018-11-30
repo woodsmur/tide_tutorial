@@ -1,0 +1,19 @@
+[package]
+name = "asyncawait"
+version = "0.1.0"
+authors = ["lichuan <lichuan@mur>"]
+edition = "2018"
+
+[dependencies]
+futures = "0.1.25"
+
+# enable the async-await stuff using a feature flag:
+tokio = { version = "0.1.13", features = ["async-await-preview"] }
+
+# Only needs to be explicitly imported if you want to make use of
+# the machinery to convert promises back and forth between 0.1 and 0.3
+# (which is built into the provided await! macro only otherwise):
+tokio-async-await = "0.1.4"
+
+basic-cookies = "0.1.2"
+tide = { git = "https://github.com/rust-net-web/tide" }
